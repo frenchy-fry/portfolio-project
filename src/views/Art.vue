@@ -3,7 +3,7 @@
     <div id="image-container">
 
       <div v-for="(column, index) in imageColumns" :key="index" class="column">
-        <div v-for="image in column" :key="image.src">
+        <div v-for="image in column" :key="image.src" v-tilt>
           <img :src="image.src" alt="" class="art-image">
         </div>
       </div>
@@ -19,13 +19,13 @@
     justify-content: center;
 
     margin: auto;
-    width: 800px;
+    width: 1200px;
     /* background: green; */
   }
 
   .art-image {
-    width: 150px;
-    padding: 5px;
+    width: 350px;
+    padding: 5px 15px 20px 15px;
   }
 </style>
 
